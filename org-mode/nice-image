@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Nice insert image with attributes
+# key: nice-image
+# --
+
+#+caption: WRITE A CAPTION!
+#+name: fig:thing
+#+attr_org: :width 500px
+#+attr_html: :width 400px
+[[./path/to/image.png]]
+
+Here is a link to [[fig:thing][that thing]].

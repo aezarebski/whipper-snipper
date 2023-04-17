@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Base plotting scatter iris
+# key: base-scatter
+# --
+
+plot(iris[iris$Species == "setosa", ]$Sepal.Length,
+     iris[iris$Species == "setosa", ]$Petal.Length,
+     col = "red", pch = 1,
+     xlab = "Sepal Length", ylab = "Petal Length",
+     xlim = range(iris$Sepal.Length), ylim = range(iris$Petal.Length))
+points(iris[iris$Species == "versicolor", ]$Sepal.Length,
+       iris[iris$Species == "versicolor", ]$Petal.Length,
+       col = "green", pch = 2)
+points(iris[iris$Species == "virginica", ]$Sepal.Length,
+       iris[iris$Species == "virginica", ]$Petal.Length,
+       col = "blue", pch = 3)
+legend(6.5, 3,
+       title = "Species",
+       legend = c("Setosa", "Versicolor", "Virginica"),
+       col = c("red", "green", "blue"),
+       pch = c(1, 2, 3),
+       bg = "orange")

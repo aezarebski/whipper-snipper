@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Base plotting histogram
+# key: base-hist
+# --
+
+data(faithful)
+
+par(bg = "lightgrey")
+hist(faithful$waiting,
+     main = expression(italic("Waiting Time between Eruptions")), 
+     breaks = seq(40, 100, by = 5),
+     xlab = NULL, ylab = NULL,
+     col = "blue", border = "orange", bg = "grey")
+axis(side = 1, col.axis = "blue", col = "orange")
+title(xlab = "Waiting Time (mins)",
+      col.lab = "orange", line = 3)
+axis(side = 2, col.axis = "orange", col = "green")
+title(ylab = "Frequency",
+      col.lab = "green", line = 3)

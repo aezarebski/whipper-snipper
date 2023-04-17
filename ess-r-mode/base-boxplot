@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Base plotting boxplot
+# key: base-boxplot
+# --
+
+data(iris)
+
+par(bg = "lightblue", mar = c(5, 4, 4, 2) + 0.1)
+
+boxplot(iris$Sepal.Length ~ iris$Species,
+        main = "Distribution of Sepal Length in Iris Dataset",
+        col.main = "purple",
+        xlab = expression(italic("Species")),
+        ylab = "Sepal Length (cm)",
+        col = "purple",
+        border = "red",
+        notch = TRUE,
+        boxwex = 0.5,
+        staplewex = 0.5,
+        outpch = 16,
+        outcol = "blue",
+        horizontal = FALSE)

@@ -1,0 +1,30 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Plotting example with geom_ribbon
+# key: ggplot2-ribbon
+# --
+
+mtcars_ext <- mtcars |>
+  group_by(cyl) |>
+  summarize(mean_mpg = mean(mpg),
+            sd_mpg = sd(mpg),
+            lower_mpg = mean_mpg - 1.96 * sd_mpg / sqrt(n()),
+            upper_mpg = mean_mpg + 1.96 * sd_mpg / sqrt(n())) |>
+  ungroup()
+
+gg <- ggplot(mtcars_ext, aes(x = cyl)) +
+  geom_ribbon(aes(ymin = lower_mpg, ymax = upper_mpg),
+              fill = "blue",
+              alpha = 0.3,
+              color = "darkblue",
+              linetype = "dashed",
+              size = 0.8,
+              show.legend = FALSE) +
+  geom_line(aes(y = mean_mpg),
+            color = "red",
+            linewidth = 1,
+            linetype = "solid",
+            show.legend = FALSE) +
+  labs(x = "Number of Cylinders",
+       y = "Miles per Gallon (MPG)") +
+  theme_bw()

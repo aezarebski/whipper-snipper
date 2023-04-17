@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Base plotting lines curves and points
+# key: base-lines
+# --
+
+x <- seq(0, 2, length.out = 100)
+foo <- function(x) x
+bar <- function(x) exp(-(x - 1)^2) * sin(x * 8)
+points_data <- data.frame(x = seq(0, 2, length = 10), y = rnorm(10))
+plot(x, foo(x), type = "l", col = "blue", xlim = c(0, 2), ylim = c(-1.5, 1.5), 
+     xlab = "x", ylab = "y", main = "Function", cex.main = 1.5)
+lines(x, bar(x), col = "red")
+points(points_data$x, points_data$y, col = "green")
+legend("topright", legend = c("Foo", "Bar", "Baz"), lty = 1, col = c("blue", "red", "green"), 
+       cex = 0.8, title = expression(bold(italic("Function"))))
