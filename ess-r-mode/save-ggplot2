@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Save a ggplot2 figure to default paper sizes
+# key: save-ggplot2
+# --
+
+ggsave(filename = $1,
+       plot = $2,
+       ## A5 height = 14.8, width = 21.0,
+       ## A6 height = 10.5, width = 14.8,
+       ## A7 height = 7.4, width = 10.5,
+       units = "cm")
+
+$0

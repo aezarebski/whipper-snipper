@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Save data.frame to CSV output from R using write.table
+# key: save-dataframe
+# --
+
+write.table(x = $1,
+            file = $2,
+            sep = ",",
+            row.names = FALSE)
+
+$0
