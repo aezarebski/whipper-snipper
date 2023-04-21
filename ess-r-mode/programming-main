@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Programming main function
+# key: programming-main
+# --
+
+main <- function(args) {
+  $0
+}
+
+if (!interactive()) {
+  args <- commandArgs(trailingOnly = TRUE)
+  # if you are using argparse this might help...
+  # args <- parser$parse_args()
+  main(args)
+}
