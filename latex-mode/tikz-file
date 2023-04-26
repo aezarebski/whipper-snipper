@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: tikz basic file
+# key: tikz-file
+# --
+
+\documentclass[preview,varwidth=true]{standalone}
+
+\usepackage{tikz}
+% Optional PGF libraries
+\usepackage{pgflibraryarrows}
+\usepackage{pgflibrarysnakes}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
+
+%% AMAZING TIKZ DRAWING HERE!
+
+\end{tikzpicture}
+
+\end{document}

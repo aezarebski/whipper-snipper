@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Func compile tikz to png
+# key: func-compile-tikz-to-png
+# --
+
+#######################################
+# Compiles TikZ diagram to PNG
+# Arguments:
+#   File containing TikZ diagram
+# Outputs:
+#   Writes pdflatex output
+#######################################
+function compile2Png {
+    pdflatex \$1
+    echo "Converting $1.pdf to $1.png"
+    convert -density 300 -background white -alpha remove -alpha off \$1.pdf \$1.png
+}
