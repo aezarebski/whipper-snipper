@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: quote environment
+# key: quote
+# --
+
+\begin{quote}
+
+\end{quote}
