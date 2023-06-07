@@ -1,9 +1,9 @@
 # -*- mode: snippet -*-
 # contributor: Alexander E. Zarebski (aezarebski@gmail.com)
-# name: Python Code Block
-# key: python-code
+# name: Properties of a header
+# key: nice-properties
 # --
 
-\`\`\`{python}
+:PROPERTIES:
 $1
-\`\`\`
+:END:
