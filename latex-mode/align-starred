@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Align starred
+# key: align-starred
+# --
+
+\begin{align*}
+
+\end{align*}
