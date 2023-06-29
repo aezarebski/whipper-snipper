@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Source block Python
+# key: src-python
+# --
+
+\`\`\`{python}
+$1
+\`\`\`
