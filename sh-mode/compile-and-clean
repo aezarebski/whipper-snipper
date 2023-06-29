@@ -1,0 +1,40 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Compile and clean function for TEX to PDF
+# key: compile-and-clean
+# --
+
+#######################################
+# Compiles LaTeX document with pdflatex and bibtex,
+# cleans auxiliary files, and makes a backup of the output.
+# Arguments:
+#   Base filename of LaTeX document (without .tex extension)
+# Outputs:
+#   Writes pdflatex and bibtex output to stdout
+#   Writes .pdf output file
+#   Writes dated backup of .pdf output file
+# Side Effects:
+#   Removes .aux, .log, .out, .bbl, .blg, .run.xml files
+#######################################
+function compileAndClean {
+    base_filename=$1
+    # Compile LaTeX document
+    pdflatex $base_filename
+    bibtex $base_filename
+    pdflatex $base_filename
+    pdflatex $base_filename
+
+    # List of extensions of temporary files to remove
+    aux_extensions=(aux log out bbl blg run.xml)
+
+    # Remove temporary files
+    for ext in "${aux_extensions[@]}"; do
+        tmp_file="$base_filename.$ext"
+        if [ -f "$tmp_file" ]; then
+            rm $tmp_file
+        fi
+    done
+
+    # Make a backup copy of the pdf with today's date
+    cp "$base_filename.pdf" "$base_filename-$(date '+%Y-%m-%d').pdf"
+}
