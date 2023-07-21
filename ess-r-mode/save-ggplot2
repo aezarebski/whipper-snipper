@@ -6,9 +6,9 @@
 
 ggsave(filename = $1,
        plot = $2,
-       ## A5 height = 14.8, width = 21.0,
-       ## A6 height = 10.5, width = 14.8,
-       ## A7 height = 7.4, width = 10.5,
+       ## height = 14.8, width = 21.0, # A5
+       ## height = 10.5, width = 14.8, # A6
+       ## height = 7.4, width = 10.5, # A7
        units = "cm")
 
 $0

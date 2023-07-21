@@ -17,7 +17,7 @@
 #   Removes .aux, .log, .out, .bbl, .blg, .run.xml files
 #######################################
 function compileAndClean {
-    base_filename=$1
+    base_filename=\$1
     # Compile LaTeX document
     pdflatex $base_filename
     bibtex $base_filename
