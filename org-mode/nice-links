@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Nice example of linking
+# key: nice-links
+# --
+
+/:PROPERTIES:
+/:CUSTOM_ID: my-custom-id
+/:END:
+
+The section is referenced [[#my-custom-id][here]].
