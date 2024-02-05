@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# contributor: Alexander E. Zarebski (aezarebski@gmail.com)
+# name: Nice debugger statement
+# key: nice-debugger
+# --
+import pdb; pdb.set_trace()
